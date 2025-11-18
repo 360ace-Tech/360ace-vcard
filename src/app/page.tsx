@@ -170,7 +170,7 @@ export default function Home() {
         </AnimatePresence>
 
         {/* Main Content Area */}
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center w-full">
           <AnimatePresence mode="wait">
             {showForm ? (
               <motion.div
@@ -179,7 +179,7 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
-                className="w-full"
+                className="w-full flex justify-center"
               >
                 <VCardForm onSubmit={handleSubmit} isLoading={isLoading} />
               </motion.div>
@@ -190,7 +190,7 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
-                className="space-y-6 w-full max-w-2xl"
+                className="space-y-6 w-full max-w-2xl mx-auto"
               >
                 <VCardResult qrCode={result.qrCode} vcard={result.vcard} data={result.data} />
 
